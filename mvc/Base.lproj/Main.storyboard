@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="mvc" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,71 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DjX-ca-Lz3">
+                                <rect key="frame" x="91" y="140" width="370" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="ELs-Jb-37V"/>
+                                    <constraint firstAttribute="width" constant="370" id="Ppi-Pz-ars"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="food" translatesAutoresizingMaskIntoConstraints="NO" id="Ab1-yy-kwk">
+                                <rect key="frame" x="154" y="219" width="292" height="272"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="8Wq-9a-8ps"/>
+                                    <constraint firstAttribute="width" constant="240" id="dYv-aD-04V"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Rename" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ghn-MH-32P">
+                                <rect key="frame" x="191" y="53" width="260" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="EHy-o3-Ub9"/>
+                                    <constraint firstAttribute="width" constant="260" id="x7V-7H-9Al"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GB8-j2-8Lv">
+                                <rect key="frame" x="191" y="91" width="260" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="deT-Cc-ztw"/>
+                                    <constraint firstAttribute="width" constant="260" id="kir-UP-B1N"/>
+                                </constraints>
+                                <state key="normal" title="Rename"/>
+                                <connections>
+                                    <action selector="renamePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8mY-Tg-fWu"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="GB8-j2-8Lv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AMc-tI-2jU"/>
+                            <constraint firstItem="Ab1-yy-kwk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Aog-li-Vjg"/>
+                            <constraint firstItem="ghn-MH-32P" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JNT-AH-BqY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="DjX-ca-Lz3" secondAttribute="trailing" constant="119" id="Mj5-Ik-tx2"/>
+                            <constraint firstItem="GB8-j2-8Lv" firstAttribute="top" secondItem="ghn-MH-32P" secondAttribute="bottom" constant="8" id="QQG-84-Hb6"/>
+                            <constraint firstItem="ghn-MH-32P" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="33" id="R3x-AX-CNw"/>
+                            <constraint firstItem="DjX-ca-Lz3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="120" id="Rzn-jb-X8s"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="DjX-ca-Lz3" secondAttribute="bottom" constant="439" id="Tdh-iJ-tcV"/>
+                            <constraint firstItem="Ab1-yy-kwk" firstAttribute="top" secondItem="DjX-ca-Lz3" secondAttribute="bottom" constant="111" id="eEQ-RD-ckI"/>
+                            <constraint firstItem="DjX-ca-Lz3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="j2s-23-1qo"/>
+                            <constraint firstItem="DjX-ca-Lz3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="71" id="xRt-PH-652"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="fullName" destination="DjX-ca-Lz3" id="Ymz-G4-Ryy"/>
+                        <outlet property="rename" destination="ghn-MH-32P" id="Chp-5k-sUX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="305" y="429"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="food" width="95" height="98"/>
+    </resources>
 </document>
